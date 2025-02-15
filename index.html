@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      td {
+        padding: 6px 4px 6px 4px;
+        
+      }
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </head>
+  <body>
+    <!-- title -->
+    <div class="max-w-sm mx-auto mb-5 mt-5">
+      <h1 class="mx-auto font-bold text-black">
+        Helloooo! teacher here is my task
+      </h1>
+    </div>
+
+    <div
+      class="main-content grid grid-cols-1 lg:grid-cols-2 bg-white shadow-lg p-20"
+    >
+      <!--start task fill form -->
+
+      <div class="p-10">
+        <h1 class="font-bold text-black">Add Task</h1>
+
+        <form class="mt-10" id="form">
+          <div class="name-fill mb-5">
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Task Name</label
+            >
+            <input
+              type="name"
+              id="name"
+              class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+              placeholder="Huon sreylen"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="date"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Choose Date</label
+            >
+
+            <div class="relative max-w-sm">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                  />
+                </svg>
+              </div>
+              <input
+                id="datepicker-format"
+                datepicker
+                datepicker-format="mm-dd-yyyy"
+                type="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Select date"
+              />
+            </div>
+          </div>
+
+          <div class="select-option mb-5">
+            <label
+              for="type-submit"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Choose Priority</label
+            >
+            <select
+              id="type-submit"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option>United States</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>high</option>
+            </select>
+          </div>
+
+          <input
+            type="submit"
+            value="Add new Task"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          />
+        </form>
+        <!-- </div> -->
+      </div>
+      <!--close task fill form -->
+
+      <!-- start tasl list -->
+
+      <div class="bg-white p-5 rounded-lg overflow-x-auto">
+        <h1 class="mx-auto font-bold text-black mb-10">Task List</h1>
+        <table
+          class="bg-gray-100 text-sm text-left rtl:text-right text-gray-500 w-full dark:text-gray-400"
+        >
+          <thead class="text-xs text-gray-900 uppercase  dark:text-gray-400">
+            <tr>
+              <th scope="col" class="px-6 py-3">TASK NAME</th>
+              <th scope="col" class="px-6 py-3">DUE DATE</th>
+              <th scope="col" class="px-6 py-3">PRIORITY</th>
+              <th scope="col" class="px-6 py-3">STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+          <!-- <button id="pending"
+            submit-buttom
+            type="submit"
+            class="text-white bg-green-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          > 
+            pending
+          </button>   -->
+             <tr class="bg-white dark:bg-gray-800">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              ></th>
+              <td class="px-6 py-4"></td>
+              <td class="px-6 py-4"></td>
+              <td class="px-6 py-4">
+                
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- close tasl list -->
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
