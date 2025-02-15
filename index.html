@@ -11,7 +11,6 @@
     <style>
       td {
         padding: 6px 4px 6px 4px;
-        
       }
     </style>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -92,7 +91,7 @@
               id="type-submit"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              <option>United States</option>
+              <option hidden invalid>Select Priority</option>
               <option>Low</option>
               <option>Medium</option>
               <option>high</option>
@@ -116,7 +115,7 @@
         <table
           class="bg-gray-100 text-sm text-left rtl:text-right text-gray-500 w-full dark:text-gray-400"
         >
-          <thead class="text-xs text-gray-900 uppercase  dark:text-gray-400">
+          <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
             <tr>
               <th scope="col" class="px-6 py-3">TASK NAME</th>
               <th scope="col" class="px-6 py-3">DUE DATE</th>
@@ -125,23 +124,14 @@
             </tr>
           </thead>
           <tbody id="table">
-          <!-- <button id="pending"
-            submit-buttom
-            type="submit"
-            class="text-white bg-green-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          > 
-            pending
-          </button>   -->
-             <tr class="bg-white dark:bg-gray-800">
+            <tr class="bg-white dark:bg-gray-800">
               <th
                 scope="row"
                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               ></th>
               <td class="px-6 py-4"></td>
               <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">
-                
-              </td>
+              <td class="px-6 py-4"></td>
             </tr>
           </tbody>
         </table>
@@ -149,6 +139,6 @@
       <!-- close tasl list -->
     </div>
 
-    <script src="index.js"></script>
+    <script src="./script/index.js"></script>
   </body>
 </html>
